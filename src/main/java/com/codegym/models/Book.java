@@ -19,8 +19,8 @@ public class Book {
     @OneToMany
     private List<BookPicture> bookPictures;
 
-    @ManyToMany
-    private Collection<Author> authors;
+//    @ManyToMany
+//    private Collection<Author> authors;
 
     public Date getDateCreate() {
         return dateCreate;
@@ -52,26 +52,26 @@ public class Book {
     public Book() {
     }
 
-    public Book(String name, long price, String description, long amount, Date dateCreate, List<BookPicture> bookPictures, Collection<Author> authors, Set<Language> languages, Publishing publishing, Category category) {
+    public Book(String name, long price, String description, long amount, Date dateCreate, List<BookPicture> bookPictures, Set<Language> languages, Publishing publishing, Category category) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.amount = amount;
         this.dateCreate = dateCreate;
         this.bookPictures = bookPictures;
-        this.authors = authors;
+//        this.authors = authors;
         this.languages = languages;
         this.publishing = publishing;
         this.category = category;
     }
 
-    public Collection<Author> getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(Collection<Author> authors) {
-        this.authors = authors;
-    }
+//    public Collection<Author> getAuthors() {
+//        return authors;
+//    }
+//
+//    public void setAuthors(Collection<Author> authors) {
+//        this.authors = authors;
+//    }
 
     public Long getId() {
         return id;

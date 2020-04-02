@@ -134,7 +134,7 @@ public class BookController {
         Publishing publishing = book.getPublishing();
         long millis = System.currentTimeMillis();
         java.sql.Date date = new java.sql.Date(millis);
-        Book currentBook = new Book(book.getName(), book.getPrice(), book.getDescription(), book.getAmount(), date, book.getBookPictures(), book.getAuthors(), book.getLanguages(), publishing, category);
+        Book currentBook = new Book(book.getName(), book.getPrice(), book.getDescription(), book.getAmount(), date, book.getBookPictures(), book.getLanguages(), publishing, category);
         bookService.save(currentBook);
         return new ResponseEntity<Optional<Book>>(HttpStatus.CREATED);
     }
@@ -163,7 +163,7 @@ public class BookController {
         currentBook.get().setDescription(book.getDescription());
         currentBook.get().setAmount(book.getAmount());
         currentBook.get().setBookPictures(book.getBookPictures());
-        currentBook.get().setAuthors(book.getAuthors());
+//        currentBook.get().setAuthors(book.getAuthors());
         currentBook.get().setLanguages(book.getLanguages());
         currentBook.get().setPublishing(book.getPublishing());
         currentBook.get().setCategory(book.getCategory());
